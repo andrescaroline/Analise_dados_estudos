@@ -45,9 +45,9 @@ cursor.execute('INSERT INTO clientes(id, nome, idade, saldo) VALUES(5, "Bruno", 
 
 ### Consultas e Funções Agregadas:
 
-visualizar = cursor.execute('SELECT nome, idade FROM clientes WHERE idade > 30')
+cursor.execute('SELECT nome, idade FROM clientes WHERE idade > 30')
 
-visualizar = cursor.execute('SELECT sum(saldo) FROM clientes as SALDO ')
+cursor.execute('SELECT sum(saldo) FROM clientes as SALDO ')
 
 cursor.execute('SELECT id, nome, MAX(saldo) AS maior_saldo FROM clientes GROUP BY id, nome ORDER BY maior_saldo DESC LIMIT 1;')
 
